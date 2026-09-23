@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cobrança — Vos factures impayées, relancées automatiquement</title>
+<meta name="description" content="Cobrança relance vos clients à 7, 15 et 30 jours, puis prépare la lettre de mise en demeure. 29€/mois, comptes illimités.">
+
+<meta property="og:title" content="Cobrança — Vos factures impayées, relancées automatiquement">
+<meta property="og:description" content="Relances automatiques, lettre de mise en demeure prête à l'envoi, vue claire de ce qui est dû. 29€/mois.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --graphite:#1A1A1A;
+    --green:#00A86B;
+    --green-deep:#00895A;
+    --paper:#FAFAF8;
+    --muted:#6B6B63;
+    --green-tint:#E8F5EE;
+    --border:#E4E2DC;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    background:var(--paper);
+    color:var(--graphite);
+    font-family:'Inter',system-ui,sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .wrap{max-width:480px;margin:0 auto;padding:0 24px}
+
+  header{padding:24px 0 8px}
+  .brand{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;letter-spacing:-0.01em}
+
+  .hero{padding:36px 0 8px}
+  h1{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:2.15rem;
+    line-height:1.12;
+    letter-spacing:-0.015em;
+  }
+  .sub{
+    margin-top:18px;
+    font-size:1.05rem;
+    color:var(--muted);
+    max-width:34ch;
+  }
+
+  .cta-block{margin-top:32px}
+  .cta{
+    display:block;
+    width:100%;
+    text-align:center;
+    background:var(--green);
+    color:#fff;
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:1.05rem;
+    padding:17px 20px;
+    border-radius:6px;
+    text-decoration:none;
+    border:none;
+    transition:background .15s ease;
+  }
+  .cta:active{background:var(--green-deep)}
+  .cta-note{
+    margin-top:10px;
+    font-size:0.85rem;
+    color:var(--muted);
+    text-align:center;
+  }
+
+  .proof{
+    margin-top:28px;
+    padding:14px 16px;
+    background:var(--green-tint);
+    border-radius:6px;
+    font-size:0.9rem;
+    color:#0E5C3E;
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+  }
+  .proof span.dot{
+    flex:none;width:6px;height:6px;border-radius:50%;
+    background:var(--green);margin-top:7px;
+  }
+
+  .problem{
+    margin-top:56px;
+    padding-top:32px;
+    border-top:1px solid var(--border);
+  }
+  .problem h2{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:1.35rem;
+    letter-spacing:-0.01em;
+  }
+  .problem p{
+    margin-top:14px;
+    color:var(--muted);
+    font-size:1rem;
+    max-width:38ch;
+  }
+  .problem p + p{margin-top:12px}
+
+  .benefits{margin-top:48px}
+  .benefit{
+    display:flex;
+    gap:14px;
+    padding:18px 0;
+    border-top:1px solid var(--border);
+  }
+  .benefit:last-child{border-bottom:1px solid var(--border)}
+  .benefit .mark{
+    flex:none;
+    width:22px;height:22px;
+    margin-top:2px;
+    border-radius:5px;
+    background:var(--graphite);
+    color:#fff;
+    font-size:0.75rem;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Inter',sans-serif;font-weight:600;
+  }
+  .benefit h3{
+    font-size:1rem;
+    font-weight:600;
+  }
+  .benefit p{
+    margin-top:4px;
+    font-size:0.92rem;
+    color:var(--muted);
+  }
+
+  .price{
+    margin-top:56px;
+    padding:28px 24px;
+    background:var(--graphite);
+    color:#fff;
+    border-radius:8px;
+    text-align:center;
+  }
+  .price .amount{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:2.4rem;
+    letter-spacing:-0.02em;
+  }
+  .price .amount span{font-size:1.1rem;font-weight:500;color:#B8B8B0}
+  .price .desc{margin-top:6px;font-size:0.9rem;color:#B8B8B0}
+  .price .cta{margin-top:22px;background:var(--green)}
+
+  footer{
+    margin-top:56px;
+    padding:24px 0 40px;
+    border-top:1px solid var(--border);
+    font-size:0.8rem;
+    color:var(--muted);
+  }
+  footer p{margin-top:6px}
+
+  @media(min-width:640px){
+    .wrap{max-width:560px}
+    h1{font-size:2.5rem}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">Cobrança</div>
+  </header>
+
+  <section class="hero">
+    <h1>Vos factures impayées ne se paient pas toutes seules.</h1>
+    <p class="sub">Cobrança relance vos clients à votre place — automatiquement, jusqu'au paiement.</p>
+
+    <div class="cta-block">
+      <a class="cta" href="https://buy.stripe.com/test_dRm4gB7cmeVUdan7JQ4ZG00">Démarrer — 29€/mois</a>
+      <p class="cta-note">Sans engagement. Annulable à tout moment.</p>
+    </div>
+
+    <div class="proof">
+      <span class="dot"></span>
+      <span>Mode test actif — aucun paiement réel n'est débité pour le moment.</span>
+    </div>
+  </section>
+
+  <section class="problem">
+    <h2>Relancer un client, c'est gênant. Alors on attend.</h2>
+    <p>Après trois mois, la trésorerie se tend et la facture devient difficile à récupérer.</p>
+    <p>L'argent est dû. Il n'est simplement jamais réclamé.</p>
+  </section>
+
+  <section class="benefits">
+    <div class="benefit">
+      <div class="mark">1</div>
+      <div>
+        <h3>Relances automatiques à 7, 15 et 30 jours</h3>
+        <p>Vous entrez la facture une fois. Cobrança s'occupe du reste, sans que vous ayez à y penser.</p>
+      </div>
+    </div>
+    <div class="benefit">
+      <div class="mark">2</div>
+      <div>
+        <h3>Une lettre de mise en demeure prête à l'envoi</h3>
+        <p>Si rien ne bouge après 30 jours, le courrier formel est déjà rédigé.</p>
+      </div>
+    </div>
+    <div class="benefit">
+      <div class="mark">3</div>
+      <div>
+        <h3>Une vue claire de ce qui est dû</h3>
+        <p>À payer, relancé, encaissé — tout en euros, en un coup d'œil.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="price">
+    <div class="amount">29€ <span>/ mois</span></div>
+    <div class="desc">Comptes illimités</div>
+    <a class="cta" href="https://buy.stripe.com/test_dRm4gB7cmeVUdan7JQ4ZG00">Démarrer maintenant</a>
+  </section>
+
+  <footer>
+    <p>Cobrança — [Nom de l'entreprise à compléter] · SIRET [à compléter]</p>
+    <p>[Adresse à compléter], France</p>
+  </footer>
+
+</div>
+</body>
+</html>
